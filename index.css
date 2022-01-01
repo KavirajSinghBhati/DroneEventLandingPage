@@ -128,6 +128,7 @@ h1 {
 .drone {
   position: absolute;
   left: 0;
+  z-index: 1;
 }
 
 .blur {
@@ -308,4 +309,100 @@ button {
 
 .other-info ul li a {
   color: #000;
+}
+
+/* Media Queries */
+
+@media (min-width: 900px) {
+  html {
+    font-size: 20px;
+  }
+  .top-bg-container {
+    width: 80%;
+    grid-template-columns: 60% auto;
+  }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .content {
+    display: flex;
+    text-align: left;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  h1 {
+    font-size: 5rem;
+    width: 80%;
+  }
+  .type p {
+    width: 80%;
+  }
+
+  /* Nav */
+  .menu-btn,
+  .exit-btn {
+    display: none;
+  }
+  nav ul {
+    width: unset;
+    transform: translateX(0);
+    background: none;
+    display: flex;
+    position: unset;
+    height: auto;
+    padding-top: 1em;
+    padding-bottom: 0;
+  }
+  nav ul li a {
+    font-size: 1rem;
+    padding: 0 1em;
+  }
+  /* Quote */
+  .quote {
+    width: 80%;
+    display: grid;
+    place-content: center;
+  }
+  blockquote,
+  cite {
+    width: 50%;
+    justify-self: center;
+  }
+  blockquote {
+    font-size: 2rem;
+  }
+  /* Gallery */
+  .gallery {
+    display: flex;
+    gap: 4em;
+  }
+  .gallery-container {
+    margin-top: -5em;
+    z-index: 1;
+  }
+  h2 {
+    font-size: 4rem;
+    font-weight: normal;
+    line-height: 91.6%;
+    margin-top: 1.5em;
+  }
+  /* Contact */
+  .cols-2 {
+    display: flex;
+    gap: 3em;
+  }
+  .form-container,
+  .other-info {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+  .other-info {
+    margin-top: 2em;
+  }
+  input {
+    padding: 1.5em;
+  }
 }
